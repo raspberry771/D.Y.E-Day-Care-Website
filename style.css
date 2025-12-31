@@ -265,7 +265,7 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     height: 70px; 
 }
 
-/* --- School Info Section --- */
+/* --- School Info Section (UPDATED) --- */
 .info-section { 
     padding: 5rem 0;
     background-color: #F5F5F5;
@@ -285,44 +285,48 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     align-items: center;
 }
 
-.school-details ul li {
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    line-height: 1.5;
+/* New Grid Layout for Details */
+.school-info-grid {
+    display: grid;
+    /* Columns: Icon (30px), Label (85px fixed), Content (Auto) */
+    grid-template-columns: 30px 100px 1fr;
+    row-gap: 1.2rem;
+    column-gap: 10px;
+    align-items: start;
+    font-size: 1.4rem;
     color: #444;
 }
 
-.school-details ul li strong {
-    color: var(--text-color);
-    font-weight: 700;
-    min-width: 100px;
-}
-
-.school-details i { 
-    color: var(--accent-color); 
-    font-size: 1.6rem;
-    margin-top: 5px;
-    width: 35px;
+.grid-icon {
+    color: var(--primary-color); /* Matches Orange Theme */
     text-align: center;
-}
-
-.link-btn {
-    color: var(--primary-color);
-    text-decoration: underline;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-left: 5px;
-}
-
-.small-link {
     font-size: 1.2rem;
-    color: #7f8c8d;
-    text-decoration: underline;
-    display: block;
-    margin-top: 5px;
+    padding-top: 3px;
+}
+
+.grid-label {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.grid-content {
+    line-height: 1.5;
+}
+
+.grid-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.grid-link:hover {
+    color: #d35400;
+    border-bottom: 2px solid #d35400;
 }
 
 .school-images {
@@ -471,6 +475,8 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     }
     
     .hero-image img { max-height: 450px; }
+    
+    /* Responsive adjustment for School Grid */
     .school-grid { grid-template-columns: 1fr; gap: 2rem; }
     .school-images { order: -1; }
     
@@ -494,6 +500,23 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     .hamburger { display: block; }
     .footer-container { grid-template-columns: 1fr; text-align: center; }
     .hero h1 { font-size: 2rem; }
+
+    /* Stack inner school details for mobile */
+    .school-info-grid {
+        grid-template-columns: 30px 1fr;
+        row-gap: 1rem;
+    }
+    .grid-label {
+        grid-column: 2;
+        margin-bottom: -15px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: #888;
+        letter-spacing: 0.5px;
+    }
+    .grid-content {
+        grid-column: 2;
+    }
 
     .cloud-wrapper {
         border-radius: 30px;
@@ -615,12 +638,12 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 }
 .caption h3 {
     color: White;
-    font-size: 2rem; /* Adjust this number to make it bigger or smaller */
-    margin-bottom: 0.5rem; /* Adds a little space below the name */
+    font-size: 2rem; 
+    margin-bottom: 0.5rem; 
 }
 
 .caption p {
-    font-size: 1.2rem; /* Default is usually 1rem */
+    font-size: 1.2rem; 
 }
 /* --- Facility & Environment Section --- */
 .facility-section {
@@ -671,21 +694,21 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 }
 
 .safety-card .icon-box {
-    font-size: 3.5rem;   /* Increased from 2.5rem */
+    font-size: 3.5rem;   
     color: #e74c3c;
     margin-bottom: 1.5rem;
 }
 
 .safety-card h3 {
-    font-size: 1.6rem; /* Explicitly set larger header size */
+    font-size: 1.6rem; 
     margin-bottom: 15px;
     color: var(--text-color);
     font-weight: 700;
 }
 
 .safety-card p {
-    font-size: 1.2rem; /* Increased body text for readability */
-    line-height: 1.6;  /* Adds space between lines */
+    font-size: 1.2rem; 
+    line-height: 1.6;  
     color: #555;
 }
 
@@ -740,7 +763,6 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 
 /* --- Responsive Adjustments for About Page --- */
 @media (max-width: 900px) {
-    /* Stack grid vertically on tablet/mobile */
     .about-grid {
         grid-template-columns: 1fr;
     }
@@ -759,4 +781,203 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 
 @media (max-width: 600px) {
     .page-header h1 { font-size: 2.5rem; }
+}
+
+/* ==========================================================================
+   CONTACT PAGE STYLES
+   ========================================================================== */
+
+/* Header tweaks */
+.contact-header {
+    background: linear-gradient(135deg, #a29bfe 0%, #fffaf0 100%);
+}
+
+.contact-header h1 {
+    color: #6c5ce7;
+}
+
+/* Section Layout */
+.contact-section {
+    padding: 2rem 0 6rem 0;
+    background-color: var(--white);
+    position: relative;
+    z-index: 5;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Form is slightly wider */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Form Styles */
+.form-container {
+    background: #fffaf0;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 2px dashed #a29bfe; /* Playful border */
+}
+
+.form-title {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.row-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: all 0.3s;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 159, 67, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+#form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message { color: #27ae60; }
+.error-message { color: #e74c3c; }
+
+/* Info Sidebar Styles */
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--accent-color);
+}
+
+.info-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(15, 185, 177, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    margin-bottom: 0.2rem;
+    color: #2d3436;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Map */
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 5px solid white;
+    height: 400px;
+}
+
+.map-container iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/* Responsive adjustments for Contact Page */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 3rem;
+    }
+    
+    .info-sidebar {
+        order: -1; 
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .row-group {
+        grid-template-columns: 1fr; /* Stack inputs on small screens */
+        gap: 0;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
 }
