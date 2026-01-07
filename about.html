@@ -18,10 +18,10 @@
                 <span class="brand-name">Rainbow D.Y.E</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="#">Parent Resources</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="about.html" class="active" id="nav-about">About Us</a></li>
+                <li><a href="parent.html" id="nav-parent">Parent Resources</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
                 <li><button id="translate-btn" class="translate-btn">中文</button></li>
             </ul>
             <div class="hamburger">
@@ -31,15 +31,22 @@
     </nav>
 
     <header class="page-header">
+        <div class="floating-icon icon-1"><i class="fas fa-sun"></i></div>
+        <div class="floating-icon icon-3"><i class="fas fa-star"></i></div>
+        <div class="floating-icon icon-4"><i class="fas fa-music"></i></div>
+        <div class="floating-icon icon-5"><i class="fas fa-heart"></i></div>
+        <div class="floating-icon icon-6"><i class="fas fa-palette"></i></div>
+        <div class="floating-icon icon-7"><i class="fas fa-smile"></i></div>
         <div class="container">
-            <h1>Our Story & Philosophy</h1>
-            <p>Get to know the heart, soul, and safety behind Rainbow D.Y.E.</p>
+            <h1 id="about-header-title">Our Story & Philosophy</h1>
+            <p id="about-header-desc">Get to know the heart, soul, and safety behind Rainbow D.Y.E.</p>
         </div>
         <div class="custom-shape-divider-bottom">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
             </svg>
         </div>
+        
     </header>
 
    <section class="about-section">
@@ -48,8 +55,8 @@
         <div class="about-grid">
             
             <div class="about-text">
-                <h2 class="section-title left-align">Our Philosophy</h2>
-                <p class="philosophy-text">
+                <h2 class="section-title left-align" id="about-phil-title">Our Philosophy</h2>
+                <p class="philosophy-text" id="about-phil-text">
                     At Rainbow D.Y.E., our mission is to create a vibrant educational sanctuary where children flourish through love, learning, and laughter. We are more than just a small family care home; we offer a unique bilingual immersion program that naturally develops Mandarin and English skills through playful exploration, opening doors to a world of cultural connection and communication. 
                     <br><br>
                     Our holistic curriculum weaves together Music Enlightenment and Social-Emotional Learning (SEL) to nurture creativity, empathy, and confidence in every child. In our warm, family-oriented environment we guide children to become the unique colors that will brighten and inspire the world.
@@ -60,27 +67,27 @@
                 <div class="image-card yuri-card">
                     <img src="images/Gemini_Generated_Image_ag5flrag5flrag5f.png" alt="Yuri - Director">
                     <div class="caption">
-                        <h3>Ms. Yuri</h3>
-                        <p>Director & Lead Teacher</p>
+                        <h3 id="about-yuri-name">Ms. Yuri</h3>
+                        <p id="about-yuri-role">Director & Lead Teacher</p>
                     </div>
                 </div>
                 </div>
         </div>
 
        <div class="curriculum-container">
-    <h3><i class="fas fa-book-open"></i> Our Curriculum</h3>
-    <p>Take a peek into our daily schedule.</p>
-    
-    <div class="curriculum-img-wrapper">
-        <img src="images/708b906c-6d1e-4439-8b71-4f4a3924c349.jpg" alt="Rainbow D.Y.E Weekly Curriculum Schedule" class="curriculum-image">
-        
-        <div class="download-container">
-            <a href="images/RainbowDYECurriculum.pdf" download="RainbowDYECurriculum" class="cta-btn primary">
-        <i class="fas fa-download"></i> Download Schedule
-    </a>
-</div>
-    </div>
-</div>
+            <h3 id="about-curr-title"><i class="fas fa-book-open"></i> Our Curriculum</h3>
+            <p id="about-curr-desc">Take a peek into our daily schedule.</p>
+            
+            <div class="curriculum-img-wrapper">
+                <img src="images/708b906c-6d1e-4439-8b71-4f4a3924c349.jpg" alt="Rainbow D.Y.E Weekly Curriculum Schedule" class="curriculum-image">
+                
+                <div class="download-container">
+                    <a href="images/RainbowDYECurriculum.pdf" download="RainbowDYECurriculum" class="cta-btn primary" id="about-curr-btn">
+                        <i class="fas fa-download"></i> Download Schedule
+                    </a>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
@@ -94,54 +101,54 @@
         </div>
 
         <div class="container">
-            <h2 class="section-title">Safety & Environment</h2>
-            <p class="subtitle">We prioritize the well-being of every child through strict safety protocols and a secure environment.</p>
+            <h2 class="section-title" id="about-safety-title">Safety & Environment</h2>
+            <p class="subtitle" id="about-safety-subtitle">We prioritize the well-being of every child through strict safety protocols and a secure environment.</p>
 
             <div class="safety-grid">
                 <div class="safety-card">
                     <div class="icon-box"><i class="fas fa-id-card-alt"></i></div>
-                    <h3>Secure Pick-Up</h3>
-                    <p>Children are only released to verified parents or authorized individuals with ID checks.</p>
+                    <h3 id="safe-1-title">Secure Pick-Up</h3>
+                    <p id="safe-1-desc">Children are only released to verified parents or authorized individuals with ID checks.</p>
                 </div>
 
                 <div class="safety-card">
                     <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Health Protocols</h3>
-                    <p>We provide a supervised quiet space for children who feel unwell while waiting for pickup.</p>
+                    <h3 id="safe-2-title">Health Protocols</h3>
+                    <p id="safe-2-desc">We provide a supervised quiet space for children who feel unwell while waiting for pickup.</p>
                 </div>
 
                 <div class="safety-card">
                     <div class="icon-box"><i class="fas fa-pills"></i></div>
-                    <h3>Medication Safety</h3>
-                    <p>We require doctor’s prescriptions, original packaging, and signed forms for absolute safety.</p>
+                    <h3 id="safe-3-title">Medication Safety</h3>
+                    <p id="safe-3-desc">We require doctor’s prescriptions, original packaging, and signed forms for absolute safety.</p>
                 </div>
 
                 <div class="safety-card">
                     <div class="icon-box"><i class="fas fa-exclamation-circle"></i></div>
-                    <h3>Allergy Awareness</h3>
-                    <p>Detailed allergy contingency plans are established upon enrollment for safe dining.</p>
+                    <h3 id="safe-4-title">Allergy Awareness</h3>
+                    <p id="safe-4-desc">Detailed allergy contingency plans are established upon enrollment for safe dining.</p>
                 </div>
             </div>
 
             <div class="nutrition-container">
                 <div class="nutrition-text">
-                    <h2><i class="fas fa-utensils"></i> Wholesome Nutrition</h2>
-                    <p class="intro">We believe that a healthy body fuels a healthy mind. We provide three nutritious meals daily featuring a balanced mix of Asian and Western home-style cooking.</p>
+                    <h2 id="nutri-title"><i class="fas fa-utensils"></i> Wholesome Nutrition</h2>
+                    <p class="intro" id="nutri-intro">We believe that a healthy body fuels a healthy mind. We provide three nutritious meals daily featuring a balanced mix of Asian and Western home-style cooking.</p>
                     
                     <ul class="nutrition-list">
-                        <li>
+                        <li id="nutri-li-1">
                             <strong><i class="fas fa-apple-alt"></i> Diverse Menu:</strong> 
                             Favorites include chicken & onion stir-fry, pork dumplings, braised meat, pasta, and mini-burgers.
                         </li>
-                        <li>
+                        <li id="nutri-li-2">
                             <strong><i class="fas fa-baby"></i> Infant Care:</strong> 
                             Specialized meals like pumpkin, chicken, or vegetable porridge for those under two.
                         </li>
-                        <li>
+                        <li id="nutri-li-3">
                             <strong><i class="fas fa-leaf"></i> Fresh & Wholesome:</strong> 
                             Snacks include seasonal fruits, milk, bread, and yogurt.
                         </li>
-                        <li>
+                        <li id="nutri-li-4">
                             <strong><i class="fas fa-carrot"></i> Special Events:</strong> 
                             "Vege Day" every Tuesday and occasional cooking classes for the kids!
                         </li>
@@ -164,26 +171,26 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <h3>Rainbow D.Y.E</h3>
-                <p>&copy; 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
+                <p id="footer-copy">© 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
             </div>
             <div class="footer-col">
-                <h3>Contact Info</h3>
+                <h3 id="footer-contact-title">Contact Info</h3>
                 <p>950 Redwood Ave, Sunnyvale, CA 94086</p>
                 <p>(510) 309-0691</p>
                 <p>rainbowdyehomecare@gmail.com</p>
-                <p><strong>Hours:</strong> Mon-Fri 8am - 5pm</p>
+                <p><strong id="footer-hours-label">Hours:</strong> Mon-Fri 8am - 5pm</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61572005618733"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Parent Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html" id="foot-link-home">Home</a></li>
+                    <li><a href="about.html" id="foot-link-about">About Us</a></li>
+                    <li><a href="parent.html" id="foot-link-parent">Parent Resources</a></li>
+                    <li><a href="contact.html" id="foot-link-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>

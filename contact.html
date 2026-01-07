@@ -25,10 +25,10 @@
                 <span class="brand-name">Rainbow D.Y.E</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Parent Resources</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="about.html" id="nav-about">About Us</a></li>
+                <li><a href="parent.html" id="nav-parent">Parent Resources</a></li>
+                <li><a href="contact.html" class="active" id="nav-contact">Contact Us</a></li>
                 <li><button id="translate-btn" class="translate-btn">中文</button></li>
             </ul>
             <div class="hamburger">
@@ -38,9 +38,15 @@
     </nav>
 
     <header class="page-header contact-header">
+        <div class="floating-icon icon-1"><i class="fas fa-sun"></i></div>
+        <div class="floating-icon icon-3"><i class="fas fa-star"></i></div>
+        <div class="floating-icon icon-4"><i class="fas fa-music"></i></div>
+        <div class="floating-icon icon-5"><i class="fas fa-heart"></i></div>
+        <div class="floating-icon icon-6"><i class="fas fa-palette"></i></div>
+        <div class="floating-icon icon-7"><i class="fas fa-smile"></i></div>
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to meet you! Fill out the form below to learn more about our programs or schedule a visit.</p>
+            <h1 id="contact-header-title">Contact Us</h1>
+            <p id="contact-header-desc">We'd love to meet you! Fill out the form below to learn more about our programs or schedule a visit.</p>
         </div>
         
         <div class="custom-shape-divider-bottom">
@@ -55,52 +61,52 @@
             <div class="contact-wrapper">
                 
                 <div class="form-container">
-                    <h2 class="form-title">Send us a Message</h2>
+                    <h2 class="form-title" id="form-title">Send us a Message</h2>
                     <form id="contact-form">
                         <div class="form-group">
-                            <label for="parentName">Parent's Name</label>
+                            <label for="parentName" id="label-parent">Parent's Name</label>
                             <input type="text" id="parentName" name="parent_name" placeholder="First Name, Last Name" required>
                         </div>
 
                         <div class="row-group">
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
+                                <label for="phone" id="label-phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone_number" placeholder="Phone Number" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address</label>
+                                <label for="email" id="label-email">Email Address</label>
                                 <input type="email" id="email" name="user_email" placeholder="Email Address" required>
                             </div>
                         </div>
 
                         <div class="row-group">
                             <div class="form-group">
-                                <label for="childName">Child's Name</label>
+                                <label for="childName" id="label-child">Child's Name</label>
                                 <input type="text" id="childName" name="child_name" placeholder="Child's Name" required>
                             </div>
                             <div class="form-group">
-                                <label for="childDob">Date of Birth</label>
+                                <label for="childDob" id="label-dob">Date of Birth</label>
                                 <input type="date" id="childDob" name="child_dob" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="contactTime">Best Time to Contact</label>
+                            <label for="contactTime" id="label-time">Best Time to Contact</label>
                             <select id="contactTime" name="best_time">
-                                <option value="Anytime">Anytime</option>
-                                <option value="Morning">Morning</option>
-                                <option value="Afternoon">Afternoon</option>
-                                <option value="Evening">Evening</option>
+                                <option value="Anytime" id="opt-any">Anytime</option>
+                                <option value="Morning" id="opt-morn">Morning</option>
+                                <option value="Afternoon" id="opt-aft">Afternoon</option>
+                                <option value="Evening" id="opt-eve">Evening</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Questions or Comments (Optional)</label>
+                            <label for="message" id="label-msg">Questions or Comments (Optional)</label>
                             <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
                         </div>
 
                         <button type="submit" class="cta-btn primary submit-btn">
-                            <span>Submit Request</span>
+                            <span id="btn-submit-text">Submit Request</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                         <p id="form-status"></p>
@@ -109,12 +115,12 @@
 
                 <div class="info-sidebar">
                     <div class="info-card">
-                        <h3>General Information</h3>
+                        <h3 id="info-title">General Information</h3>
                         
                         <div class="info-item">
                             <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
                             <div>
-                                <h4>Phone</h4>
+                                <h4 id="info-label-phone">Phone</h4>
                                 <p>(510) 309-0691</p>
                             </div>
                         </div>
@@ -122,7 +128,7 @@
                         <div class="info-item">
                             <div class="icon-circle"><i class="fas fa-envelope"></i></div>
                             <div>
-                                <h4>Email</h4>
+                                <h4 id="info-label-email">Email</h4>
                                 <p>rainbowdyehomecare@gmail.com</p>
                             </div>
                         </div>
@@ -130,9 +136,9 @@
                         <div class="info-item">
                             <div class="icon-circle"><i class="fas fa-clock"></i></div>
                             <div>
-                                <h4>Operating Hours</h4>
-                                <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
-                                <p>Sat - Sun: Closed</p>
+                                <h4 id="info-label-hours">Operating Hours</h4>
+                                <p id="info-days">Mon - Fri: 8:00 AM - 5:00 PM</p>
+                                <p id="info-closed">Sat - Sun: Closed</p>
                             </div>
                         </div>
                     </div>
@@ -150,26 +156,26 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <h3>Rainbow D.Y.E</h3>
-                <p>&copy; 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
+                <p id="footer-copy">© 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
             </div>
             <div class="footer-col">
-                <h3>Contact Info</h3>
-                <p>950 Redwood Ave, Sunnyvale, CA 94086/p>
+                <h3 id="footer-contact-title">Contact Info</h3>
+                <p>950 Redwood Ave, Sunnyvale, CA 94086</p>
                 <p>(510) 309-0691</p>
                 <p>rainbowdyehomecare@gmail.com</p>
-                <p><strong>Hours:</strong> Mon-Fri 8am - 5pm</p>
+                <p><strong id="footer-hours-label">Hours:</strong> Mon-Fri 8am - 5pm</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61572005618733"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Parent Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html" id="foot-link-home">Home</a></li>
+                    <li><a href="about.html" id="foot-link-about">About Us</a></li>
+                    <li><a href="parent.html" id="foot-link-parent">Parent Resources</a></li>
+                    <li><a href="contact.html" id="foot-link-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>

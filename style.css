@@ -537,6 +537,11 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     padding: 6rem 0 8rem 0;
     text-align: center;
     position: relative;
+    overflow: hidden; /* ADD THIS: Prevents icons from floating outside the header */
+}
+.page-header .container {
+    position: relative;
+    z-index: 2; 
 }
 
 .page-header h1 {
@@ -979,5 +984,152 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
     
     .form-container {
         padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   PARENT RESOURCES PAGE STYLES
+   ========================================================================== */
+
+/* --- Calendar Section --- */
+.calendar-section {
+    padding: 4rem 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.calendar-wrapper {
+    margin-top: 2rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio ensures it looks good on all screens */
+    height: 0;
+    overflow: hidden;
+    
+    /* The "Rainbow Frame" Style */
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px var(--accent-color); /* Teal shadow block */
+    background: white;
+}
+
+.calendar-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Resources Grid Section --- */
+.resources-section {
+    padding: 5rem 0 8rem 0;
+    background-color: #fffaf0; /* Light warm background */
+}
+
+.resource-grid {
+    display: grid;
+    /* Grid Layout: Menu takes full width on mobile, shares space on desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* --- The Card Styling --- */
+.resource-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; /* Invisible border for hover effect */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+/* Special styling for the Menu Card to make it stand out */
+.menu-card {
+    border-top: 5px solid var(--secondary-color); /* Yellow top border */
+}
+
+.pdf-card {
+    border-top: 5px solid var(--accent-color); /* Teal top border */
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    background: #f8f9fa;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-card .card-icon { color: var(--secondary-color); }
+.pdf-card .card-icon { color: var(--accent-color); }
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* --- Download Buttons --- */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 159, 67, 0.3);
+}
+
+.download-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Secondary Button Style (Teal) */
+.download-btn.secondary {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(15, 185, 177, 0.3);
+}
+
+.download-btn.secondary:hover {
+    background-color: #098e87;
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 600px) {
+    .calendar-wrapper {
+        padding-bottom: 120%; /* Makes calendar taller on phone so you can see more events */
+        box-shadow: 5px 5px 0px var(--accent-color); /* Smaller shadow on mobile */
+    }
+    
+    .resource-card {
+        align-items: center; /* Center align text on mobile */
+        text-align: center;
     }
 }
