@@ -795,6 +795,8 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 /* Header tweaks */
 .contact-header {
     background: linear-gradient(135deg, #a29bfe 0%, #fffaf0 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .contact-header h1 {
@@ -958,6 +960,7 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 .map-container iframe {
     height: 100%;
     width: 100%;
+    max-width: 100%;
 }
 
 /* Responsive adjustments for Contact Page */
