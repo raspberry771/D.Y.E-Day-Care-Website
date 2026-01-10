@@ -489,7 +489,7 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px; 
+        top: 100%; 
         left: 0;
         background: white;
         padding: 20px;
