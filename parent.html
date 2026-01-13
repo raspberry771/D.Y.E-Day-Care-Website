@@ -17,10 +17,10 @@
                 <span class="brand-name">Rainbow D.Y.E</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="parent.html" class="active">Parent Resources</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="about.html" id="nav-about">About Us</a></li>
+                <li><a href="parent.html" class="active" id="nav-parent">Parent Resources</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
                 <li><button id="translate-btn" class="translate-btn">中文</button></li>
             </ul>
             <div class="hamburger">
@@ -37,8 +37,8 @@
         <div class="floating-icon icon-6"><i class="fas fa-palette"></i></div>
         <div class="floating-icon icon-7"><i class="fas fa-smile"></i></div>
         <div class="container">
-            <h1>Parent Portal</h1>
-            <p>Stay updated with our monthly events, menus, and important documents.</p>
+            <h1 id="parent-header-title">Parent Portal</h1>
+            <p id="parent-header-desc">Stay updated with our monthly events, menus, and important documents.</p>
         </div>
         
         <div class="custom-shape-divider-bottom">
@@ -50,8 +50,8 @@
 
     <section class="calendar-section">
         <div class="container">
-            <h2 class="section-title">School Calendar</h2>
-            <p class="subtitle">Check here for holidays, picture days, and special events.</p>
+            <h2 class="section-title" id="calendar-title">School Calendar</h2>
+            <p class="subtitle" id="calendar-desc">Check here for holidays, picture days, and special events.</p>
             
             <div class="calendar-wrapper">
                 <iframe 
@@ -68,17 +68,17 @@
 
     <section class="resources-section">
         <div class="container">
-            <h2 class="section-title">Downloads & Menus</h2>
+            <h2 class="section-title" id="resource-title">Downloads & Menus</h2>
             
             <div class="resource-grid">
                 
                 <div class="resource-card menu-card">
                     <div class="card-icon"><i class="fas fa-utensils"></i></div>
                     <div class="card-content">
-                        <h3>Monthly Menu</h3>
-                        <p>View our nutritious meal plan for the current month.</p>
+                        <h3 id="menu-title">Monthly Menu</h3>
+                        <p id="menu-desc">View our nutritious meal plan for the current month.</p>
                         <a href="documents/januarymeal.pdf" class="download-btn" target="_blank">
-                            View Menu <i class="fas fa-arrow-right"></i>
+                            <span id="menu-btn">View Menu</span> <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -86,10 +86,10 @@
                 <div class="resource-card pdf-card">
                     <div class="card-icon"><i class="fas fa-file-signature"></i></div>
                     <div class="card-content">
-                        <h3>Enrollment Packet</h3>
-                        <p>Ready to join? Download and fill out the sign-up forms.</p>
+                        <h3 id="enroll-title">Enrollment Packet</h3>
+                        <p id="enroll-desc">Ready to join? Download and fill out the sign-up forms.</p>
                         <a href="documents/enrollment-packet.pdf" class="download-btn secondary" download>
-                            Download PDF <i class="fas fa-download"></i>
+                            <span id="enroll-btn">Download PDF</span> <i class="fas fa-download"></i>
                         </a>
                     </div>
                 </div>
@@ -97,10 +97,10 @@
                 <div class="resource-card pdf-card">
                     <div class="card-icon"><i class="fas fa-book-open"></i></div>
                     <div class="card-content">
-                        <h3>School Handbook</h3>
-                        <p>Read about our policies, philosophy, and daily routines.</p>
+                        <h3 id="handbook-title">School Handbook</h3>
+                        <p id="handbook-desc">Read about our policies, philosophy, and daily routines.</p>
                         <a href="documents/school-info.pdf" class="download-btn secondary" download>
-                            Download PDF <i class="fas fa-download"></i>
+                            <span id="handbook-btn">Download PDF</span> <i class="fas fa-download"></i>
                         </a>
                     </div>
                 </div>
@@ -113,21 +113,22 @@
         <div class="container footer-container">
             <div class="footer-col">
                 <h3>Rainbow D.Y.E</h3>
-                <p>&copy; 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
+                <p id="footer-copy">&copy; 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.</p>
             </div>
             <div class="footer-col">
-                <h3>Contact Info</h3>
+                <h3 id="footer-contact-title">Contact Info</h3>
                 <p>Sunnyvale, CA 94086</p>
                 <p>(510) 309-0691</p>
                 <p>rainbowdyehomecare@gmail.com</p>
+                <p><strong id="footer-hours-label">Hours:</strong> Mon-Fri 8am - 5pm</p>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="parent.html">Parent Resources</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html" id="foot-link-home">Home</a></li>
+                    <li><a href="about.html" id="foot-link-about">About Us</a></li>
+                    <li><a href="parent.html" id="foot-link-parent">Parent Resources</a></li>
+                    <li><a href="contact.html" id="foot-link-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
