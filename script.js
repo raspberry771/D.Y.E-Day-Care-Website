@@ -72,7 +72,7 @@ function updateLanguage() {
 
         // --- 3. INDEX PAGE SPECIFIC ---
         if(document.getElementById("hero-title")) {
-            document.getElementById("hero-title").innerHTML = "<span class='accent-text'>歡迎來到</span> <br><span class='highlight'>Rainbow D.Y.E</span> <br><span class='accent-text'>托兒所</span>";
+            document.getElementById("hero-title").innerHTML = "<span class='accent-text'>歡迎來到</span> <br><span class='highlight'>Rainbow D.Y.E</span> <br><span class='accent-text'>小彩虹學院</span>";
             document.getElementById("hero-desc").innerText = "在這裡，每個孩子都是點亮和啟發世界的色彩。";
             document.getElementById("hero-btn").innerText = "聯絡我們";
         }
@@ -88,7 +88,7 @@ function updateLanguage() {
             document.getElementById("label-socials").innerText = "社群:";
             document.getElementById("link-fb").innerText = "訪問我們的 Facebook";
             document.getElementById("label-meals").innerText = "餐點:";
-            document.getElementById("content-meals").innerHTML = "提供午餐和兩次點心<br>配合過敏需求。<br><a href='#' class='grid-link' id='link-meal'>查看每月菜單</a>";
+            document.getElementById("content-meals").innerHTML = "提供午餐和兩次點心<br>配合過敏需求。<br><a href='documents/januarymeal.pdf' class='grid-link' id='link-meal'>查看每月菜單</a>";
         }
         if(document.getElementById("phil-quote")) {
             document.getElementById("phil-quote").innerText = "\"在我們溫馨、家庭般的環境中，您的孩子將感到安全、被愛並受到啟發。在 Rainbow D.Y.E，每個孩子都將成為點亮和啟發這個世界的色彩。\"";
@@ -221,7 +221,7 @@ function updateLanguage() {
         if(document.getElementById("nav-contact")) document.getElementById("nav-contact").innerText = "Contact Us";
 
         // --- 2. GLOBAL FOOTER ---
-        if(document.getElementById("footer-copy")) document.getElementById("footer-copy").innerHTML = "© 2025 Rainbow D.Y.E Day Care.<br>All Rights Reserved.";
+        if(document.getElementById("footer-copy")) document.getElementById("footer-copy").innerHTML = "© 2025 Rainbow D.Y.E Home Care.<br>All Rights Reserved.";
         if(document.getElementById("footer-contact-title")) document.getElementById("footer-contact-title").innerText = "Contact Info";
         if(document.getElementById("footer-hours-label")) document.getElementById("footer-hours-label").innerText = "Hours:";
         if(document.getElementById("footer-links-title")) document.getElementById("footer-links-title").innerText = "Quick Links";
@@ -232,7 +232,7 @@ function updateLanguage() {
 
         // --- 3. INDEX PAGE SPECIFIC ---
         if(document.getElementById("hero-title")) {
-            document.getElementById("hero-title").innerHTML = "<span class='accent-text'>Welcome to</span> <br><span class='highlight'>Rainbow D.Y.E</span> <br><span class='accent-text'>Day Care</span>";
+            document.getElementById("hero-title").innerHTML = "<span class='accent-text'>Welcome to</span> <br><span class='highlight'>Rainbow D.Y.E</span> <br><span class='accent-text'>Home Care</span>";
             document.getElementById("hero-desc").innerText = "Where every child becomes a color that brightens and inspires the world.";
             document.getElementById("hero-btn").innerText = "Contact Us";
         }
@@ -248,7 +248,8 @@ function updateLanguage() {
             document.getElementById("label-socials").innerText = "Socials:";
             document.getElementById("link-fb").innerText = "Visit our Facebook";
             document.getElementById("label-meals").innerText = "Meals:";
-            document.getElementById("content-meals").innerHTML = "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='#' class='grid-link' id='link-meal'>View Monthly Meal Plan</a>";
+            // Update English section to fix the link and include target='_blank'
+            document.getElementById("content-meals").innerHTML = "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='documents/januarymeal.pdf' class='grid-link' id='link-meal' target='_blank'>View Monthly Meal Plan</a>";
         }
         if(document.getElementById("phil-quote")) {
             document.getElementById("phil-quote").innerText = "\"In our warm, family-oriented environment, your child will feel safe, loved, and inspired to grow. At Rainbow D.Y.E, every child will become a color that brightens and inspires this world.\"";
@@ -339,7 +340,7 @@ function updateLanguage() {
             document.getElementById("info-label-phone").innerText = "Phone";
             document.getElementById("info-label-email").innerText = "Email";
             document.getElementById("info-label-hours").innerText = "Operating Hours";
-            document.getElementById("info-days").innerText = "Mon - Fri: 8:00 AM - 5:00 PM";
+            document.getElementById("info-days").innerText = "Mon - Fri: 8:00 AM - 6:00 PM";
             document.getElementById("info-closed").innerText = "Sat - Sun: Closed";
         }
 
@@ -417,8 +418,11 @@ if (phoneInput) {
  */
 function formatDateToMDY(isoDate) {
   if (!isoDate) return "";
+  // Splits "2007-03-06" into ["2007", "03", "06"]
   const [year, month, day] = isoDate.split("-");
-  return `${month}/${day}/${year}`;
+  
+  // Rearranges them into "03-06-2007"
+  return `${month}-${day}-${year}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
