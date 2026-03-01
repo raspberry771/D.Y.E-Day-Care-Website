@@ -106,7 +106,7 @@ function updateLanguage() {
       document.getElementById("link-fb").innerText = "訪問我們的 Facebook";
       document.getElementById("label-meals").innerText = "餐點:";
       document.getElementById("content-meals").innerHTML =
-        "提供午餐和兩次點心<br>配合過敏需求。<br><a href='documents/febuarymeal.pdf' class='grid-link' id='link-meal'>查看每月菜單</a>";
+        "提供午餐和兩次點心<br>配合過敏需求。<br><a href='documents/marchmeal.pdf' class='grid-link' id='link-meal'>查看每月菜單</a>";
     }
     if (document.getElementById("phil-quote")) {
       document.getElementById("phil-quote").innerText =
@@ -313,7 +313,7 @@ function updateLanguage() {
       document.getElementById("label-meals").innerText = "Meals:";
       // Update English section to fix the link and include target='_blank'
       document.getElementById("content-meals").innerHTML =
-        "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='documents/febuarymeal.pdf' class='grid-link' id='link-meal' target='_blank'>View Monthly Meal Plan</a>";
+        "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='documents/marchmeal.pdf' class='grid-link' id='link-meal' target='_blank'>View Monthly Meal Plan</a>";
     }
     if (document.getElementById("phil-quote")) {
       document.getElementById("phil-quote").innerText =
