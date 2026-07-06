@@ -149,12 +149,12 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
         radial-gradient(circle at 90% 10%, rgba(15, 185, 177, 0.2) 0%, transparent 40%),
         radial-gradient(circle at 50% 80%, rgba(255, 211, 42, 0.2) 0%, transparent 40%);
         
-    min-height: 70vh; 
-    display: flex;    
-    align-items: center; 
-    padding: 2rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 6rem;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .floating-icon {
@@ -181,12 +181,12 @@ h1, h2, h3 { font-family: var(--font-heading); color: #e67e22; }
 .hero-container {
     display: flex;
     align-items: center;
-    gap: 4rem; 
+    gap: 4rem;
     width: 100%;
     position: relative;
-    z-index: 2;
+    z-index: 4;
     max-width: 1400px;
-    padding: 0 40px; 
+    padding: 0 40px;
 }
 
 .hero-text { flex: 1; }
