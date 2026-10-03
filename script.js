@@ -313,7 +313,7 @@ function updateLanguage() {
       document.getElementById("label-meals").innerText = "Meals:";
       // Update English section to fix the link and include target='_blank'
       document.getElementById("content-meals").innerHTML =
-        "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='documents/augustmeal.pdf' class='grid-link' id='link-meal' target='_blank'>View Monthly Meal Plan</a>";
+        "2 Snack Breaks and Lunch.<br>Allergies Accommodated.<br><a href='documents/octobermeal.pdf' class='grid-link' id='link-meal' target='_blank'>View Monthly Meal Plan</a>";
     }
     if (document.getElementById("phil-quote")) {
       document.getElementById("phil-quote").innerText =
