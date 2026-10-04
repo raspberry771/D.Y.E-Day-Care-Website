@@ -111,7 +111,7 @@ function updateLanguage() {
     if (document.getElementById("phil-quote")) {
       document.getElementById("phil-quote").innerText =
         '"在我們溫馨、家庭般的環境中，您的孩子將感到安全、被愛並受到啟發。在 Rainbow D.Y.E，每個孩子都將成為點亮和啟發這個世界的色彩。"';
-      document.getElementById("phil-ratio").innerText = "師生比例 1:3";
+      document.getElementById("phil-ratio").innerText = "師生比例 1:4";
     }
     if (document.getElementById("values-title")) {
       document.getElementById("values-title").innerText = "核心價值";
@@ -318,7 +318,7 @@ function updateLanguage() {
     if (document.getElementById("phil-quote")) {
       document.getElementById("phil-quote").innerText =
         '"In our warm, family-oriented environment, your child will feel safe, loved, and inspired to grow. At Rainbow D.Y.E, every child will become a color that brightens and inspires this world."';
-      document.getElementById("phil-ratio").innerText = "Teacher Ratio 1:3";
+      document.getElementById("phil-ratio").innerText = "Teacher Ratio 1:4";
     }
     if (document.getElementById("values-title")) {
       document.getElementById("values-title").innerText = "Core Values";
